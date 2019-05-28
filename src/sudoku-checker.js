@@ -27,3 +27,29 @@ function Board(rowOne, rowTwo, rowThree, rowFour, rowFive, rowSix, rowSeven, row
   this.squareEight = squareEight;
   this.squareNine = squareNine;
 }
+
+export function isNumberArray(array) {
+  for (let i = 0; i < array.length; i++) {
+    if(typeof array[i] !== "number" || array[i] < 0 || array[i] > 10) {
+      return false;
+    }
+  }
+  return true;
+}
+
+
+// function isUniqueArray(array) {
+//   var repeatCount = 0;
+//   for (let i = 0; i < array.length; i++) {
+//     for (var j = 1; j < array.length; j++) {
+//       if(array[i] === array[j]) {
+//         repeatCount ++;
+//       }
+//     }
+//   }
+//   return repeatCount === 0;
+// }
+
+Board.prototype.checkSolution = function() {
+
+};
