@@ -1,4 +1,4 @@
-function Board(rowOne, rowTwo, rowThree, rowFour, rowFive, rowSix, rowSeven, rowEight, rowNine, colOne, colTwo, colThree, colFour, colFive, colSix, colSeven, colEight, colNine, squareOne, squareTwo, squareThree, squareFour, squareFive, squareSix, squareSeven, squareEight, squareNine) {
+export function Board(rowOne, rowTwo, rowThree, rowFour, rowFive, rowSix, rowSeven, rowEight, rowNine, colOne, colTwo, colThree, colFour, colFive, colSix, colSeven, colEight, colNine, squareOne, squareTwo, squareThree, squareFour, squareFive, squareSix, squareSeven, squareEight, squareNine) {
   this.rowOne = rowOne;
   this.rowTwo = rowTwo;
   this.rowThree = rowThree;
@@ -37,19 +37,17 @@ export function isNumberArray(array) {
   return true;
 }
 
+export function isUniqueArray(array) {
+  for (let i = 0; i < array.length; i++) {
+    for (let j = i + 1; j < array.length; j++) {
+      if(array[i] === array[j]) {
+        return false;
+      }
+    }
+  }
+  return true;
+}
 
-// function isUniqueArray(array) {
-//   var repeatCount = 0;
-//   for (let i = 0; i < array.length; i++) {
-//     for (var j = 1; j < array.length; j++) {
-//       if(array[i] === array[j]) {
-//         repeatCount ++;
-//       }
-//     }
-//   }
-//   return repeatCount === 0;
-// }
-
-Board.prototype.checkSolution = function() {
-
-};
+// Board.prototype.checkSolution = function() {
+//
+// };
